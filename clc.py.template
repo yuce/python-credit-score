@@ -1,0 +1,8 @@
+from hazelcast.config import Config
+
+__all__ = ["client_config"]
+
+client_config = Config()
+client_config.smart_routing = False
+client_config.statistics_enabled = True
+client_config.cluster_members = ['''{{ .ClusterAddress }}'']

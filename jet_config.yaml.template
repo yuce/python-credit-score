@@ -1,0 +1,27 @@
+pipeline:
+  readFrom:
+    step: "KafkaSources.kafka"
+    kwargs:
+      topic: "customer"
+      keyDeserializer: "string"
+      valueDeserializer: "json"
+      properties:
+        bootstrap.servers: "{{ .KafkaBootstrapAddress }}"
+    options:
+      withoutTimestamps:
+
+  transform:
+    - step: "python"
+      kwargs:
+        module: "job"
+      options:
+        localParallelism: 1
+
+  writeTo:
+    step: "KafkaSinks.kafka"
+    kwargs:
+      topic: "customer_score"
+      keySerializer: "string"
+      valueSerializer: "string"
+      properties:
+        bootstrap.servers: "{{ .KafkaBootstrapAddress }}"
