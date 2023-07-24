@@ -1,0 +1,9 @@
+# Jet Machine Learning Demo with Python
+
+Building a credit scorecard is a very typical industry-level problem, such as
+
+1. evaluating a transaction or customer’s credibility to perform further actions such as issuing a credit card or giving a balance transfer offer for high-credit customers in a credit card company,
+2. giving promotions or premium rights to high-value customers in an e-commerce platform,
+3. providing good customer segmentation to reach the right people in a marketing firm.
+
+You need to build a system to score customers, and it has to be explainable to non-tech people, because when something goes wrong (False Alarm), you will know how to explain it to the manager/customer/business side.

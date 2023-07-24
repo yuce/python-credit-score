@@ -3,6 +3,6 @@
 This is the README that explains how to create a project from this template:
 
 ```
-# clc project create python-sample
+# clc project create python-python-credit-card-score
 ```
 
